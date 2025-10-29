@@ -6,4 +6,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/runtime:9.0
 WORKDIR /app
 COPY --from=build /app/out .
-CMD ["dotnet", "NetServer.dll"]
+CMD ["dotnet", "NETProgram_hw4-1.dll"]
