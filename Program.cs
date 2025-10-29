@@ -73,6 +73,7 @@ class Program
 
                     users[nickname] = (socket, colorCode);
                     Console.WriteLine(message);
+                    await SendAsync(socket, "SYS|Complete registration");
                     await BroadcastAsync($"SYS|{nickname} joined the chat", exclude: nickname);
                 }
                 else if (parts.Length == 2 && nickname != null)
